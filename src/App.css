@@ -1,0 +1,203 @@
+/* Generell */
+
+body {
+  margin: 3% 37%;
+  /* background-color: #45b178; */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(img/background_food3.png);
+}
+.container {
+  color: black;
+  max-width: 350px;
+  background-color: white;
+  display: flex;
+  margin-top: 2%;
+  margin-left: 0%;
+  flex-direction: row;
+  justify-content: center;
+  gap: 20%;
+  font-size: 17px;
+  border: 1px solid black;
+  text-decoration: none;
+}
+
+h1 {
+  text-align: center;
+  color: white;
+}
+
+li {
+  list-style: none;
+}
+
+.frame {
+  border: 1px solid black;
+  padding: 1% 10%;
+  background-color: #789d67;
+  border: 1px solid white;
+  height: 500px;
+  width: 350px;
+}
+
+/* ADDEDIT */
+
+.inputs_add_edit {
+  display: grid;
+  gap: 7%;
+  margin-bottom: 50%;
+}
+
+.input_ae_desc {
+  height: 150px;
+}
+
+.button_grid {
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn {
+  width: 40%;
+  height: 50px;
+  background-color: rgb(0, 128, 255);
+  border-radius: 0.5rem;
+  font-weight: 600;
+}
+
+/* HOME */
+
+.inputs_home {
+  margin-bottom: 36.5%;
+  display: grid;
+  gap: 5%;
+}
+
+.outer {
+  border: 1px solid grey;
+}
+
+.floatRight {
+  float: right;
+  padding-right: 10px;
+}
+
+.title_home {
+  padding-left: 4%;
+  background-color: white;
+  color: rgb(81, 81, 81);
+}
+
+.input_desc {
+  width: 100%;
+  height: 40px;
+  color: black;
+  background-color: white;
+  border: 1px solid white;
+  border-top: 1px solid grey;
+}
+
+.btn_home_add {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.btn_add {
+  width: 50%;
+  height: 50px;
+  background-color: rgb(0, 128, 255);
+  border-radius: 0.5rem;
+  font-weight: 600;
+}
+
+.input[type="radio"] {
+  appearance: none;
+  margin: 0;
+  background-color: transparent;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+input[type="radio"]:after {
+  display: block;
+  content: "OFF";
+}
+
+input[type="radio"]:checked:after {
+  content: "ON";
+}
+
+.form-control {
+  overflow: hidden;
+}
+
+/* .form-title {
+  position: absolute;
+} */
+
+/* .checkcircle {
+  position: relative;
+  background-color: red;
+  border-radius: 100px;
+  border: 1px solid rgb(0, 128, 255);
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  z-index: 10;
+} */
+
+/* .form-desc {
+  height: 2.5em;
+} */
+
+/* DETAIL */
+.detail_topline {
+  display: grid;
+  margin-bottom: 5%;
+  grid-template-columns: 1fr 1.5fr 1fr;
+}
+
+.btn_small {
+  align-self: center;
+  width: 80%;
+  height: 60%;
+  padding: 3%;
+  background-color: rgb(0, 128, 255);
+  border-radius: 0.5rem;
+  font-weight: 600;
+  border-style: none;
+  color: white;
+}
+
+/* ############################### */
+/* Positionierung des Checkbox-Kreises noch unsauber */
+/* ############################### */
+#checkbox_reddot {
+  align-self: center;
+  margin-left: 80%;
+  background-color: red;
+  border-radius: 50%;
+  border: 1px solid rgb(0, 128, 255);
+}
+
+.detail_data {
+  padding-bottom: 57%;
+}
+
+/* Media queries */
+@media (min-width: 1200px) {
+  .container {
+    width: 750px !important;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 750px !important;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    width: 750px !important;
+  }
+}
