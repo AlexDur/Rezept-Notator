@@ -29,7 +29,7 @@ const Detail = () => {
         </div>
         <form>
           <div className="detail_data">
-            <h3>{recipe?.title}</h3>
+            <h4>{recipe?.title}</h4>
             <br />
             <table>
               <tr>{recipe?.ingredients?.ingr1}</tr>

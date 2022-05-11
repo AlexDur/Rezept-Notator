@@ -26,6 +26,7 @@ const AddEdit = props => {
   }, []);
 
   const handleChange = event => {
+    event.preventDefault();
     const input = event.target.id;
     if (input === "title") {
       setTitle(event.target.value);
@@ -41,10 +42,13 @@ const AddEdit = props => {
 
   const handleSave = () => {
     const recipe = { title, ingredients, description };
-    localStorage.setItem("recipe", JSON.stringify(recipe));
-    navigate("/");
-  };
-  const handleBack = () => {
+    const allDataToBeSent = {
+      ...recipe,
+      id: Math.floor(Math.random() * 10000),
+      favorite: Boolean,
+      createAt: Date.now(),
+    };
+    localStorage.setItem("allDataToBeSent", JSON.stringify(allDataToBeSent));
     navigate("/");
   };
 
@@ -91,7 +95,7 @@ const AddEdit = props => {
               value={ingredients.ingr3}
               onChange={handleChange}
             />
-            <input
+            <textarea
               type="text"
               value={description}
               className="input_ae_desc"
@@ -111,7 +115,6 @@ const AddEdit = props => {
             >
               Back
             </button>
-
             <button
               type="submit"
               value="Submit"

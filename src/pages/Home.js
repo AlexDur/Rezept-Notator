@@ -3,14 +3,13 @@ import { useNavigate } from "react-router-dom";
 
 function Home() {
   let navigate = useNavigate();
+  const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [radio, setRadio] = useState({
     radioOne: false,
     radioTwo: false,
     radioThree: false,
   });
-
-  const [title, setTitle] = useState("");
 
   const handleChange = event => {
     const input = event.target.value;
@@ -70,7 +69,7 @@ function Home() {
                   />
                 </div>
                 <div className="title_home">
-                  <span>Title {radio.radioOne && title} </span>
+                  <span>Title: {radio.radioOne && title} </span>
                 </div>
               </div>
 
@@ -97,7 +96,7 @@ function Home() {
                   />
                 </div>
                 <div className="title_home">
-                  <span> Title {radio.radioTwo && title}</span>
+                  <span> Title: {radio.radioTwo && title}</span>
                 </div>
               </div>
               <input
@@ -124,7 +123,7 @@ function Home() {
                   />
                 </div>
                 <div className="title_home">
-                  <span>Title {radio.radioThree && title}</span>
+                  <span>Title: {radio.radioThree && title}</span>
                 </div>
               </div>
 
@@ -145,7 +144,7 @@ function Home() {
             <button
               type="submit"
               class="btn_add btn-primary"
-              onClick={handleSubmit}
+              onClick={() => navigate("/add_edit")}
             >
               Add
             </button>
